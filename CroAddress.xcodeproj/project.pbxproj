@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43EE314E1DC9BBCF003C6DFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EE314D1DC9BBCF003C6DFF /* main.m */; };
+		43EE31511DC9BBCF003C6DFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EE31501DC9BBCF003C6DFF /* AppDelegate.m */; };
+		43EE31541DC9BBCF003C6DFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EE31531DC9BBCF003C6DFF /* ViewController.m */; };
+		43EE31571DC9BBCF003C6DFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EE31551DC9BBCF003C6DFF /* Main.storyboard */; };
+		43EE31591DC9BBCF003C6DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EE31581DC9BBCF003C6DFF /* Assets.xcassets */; };
+		43EE315C1DC9BBCF003C6DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EE315A1DC9BBCF003C6DFF /* LaunchScreen.storyboard */; };
+		43EE31671DC9BBCF003C6DFF /* CroAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EE31661DC9BBCF003C6DFF /* CroAddressTests.m */; };
+		43EE31721DC9BBCF003C6DFF /* CroAddressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EE31711DC9BBCF003C6DFF /* CroAddressUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43EE31631DC9BBCF003C6DFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43EE31411DC9BBCE003C6DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43EE31481DC9BBCE003C6DFF;
+			remoteInfo = CroAddress;
+		};
+		43EE316E1DC9BBCF003C6DFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43EE31411DC9BBCE003C6DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43EE31481DC9BBCE003C6DFF;
+			remoteInfo = CroAddress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43EE31491DC9BBCF003C6DFF /* CroAddress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroAddress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EE314D1DC9BBCF003C6DFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43EE314F1DC9BBCF003C6DFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		43EE31501DC9BBCF003C6DFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43EE31521DC9BBCF003C6DFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		43EE31531DC9BBCF003C6DFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		43EE31561DC9BBCF003C6DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43EE31581DC9BBCF003C6DFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43EE315B1DC9BBCF003C6DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43EE315D1DC9BBCF003C6DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EE31621DC9BBCF003C6DFF /* CroAddressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroAddressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EE31661DC9BBCF003C6DFF /* CroAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CroAddressTests.m; sourceTree = "<group>"; };
+		43EE31681DC9BBCF003C6DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EE316D1DC9BBCF003C6DFF /* CroAddressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroAddressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EE31711DC9BBCF003C6DFF /* CroAddressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CroAddressUITests.m; sourceTree = "<group>"; };
+		43EE31731DC9BBCF003C6DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43EE31461DC9BBCE003C6DFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE315F1DC9BBCF003C6DFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE316A1DC9BBCF003C6DFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43EE31401DC9BBCE003C6DFF = {
+			isa = PBXGroup;
+			children = (
+				43EE314B1DC9BBCF003C6DFF /* CroAddress */,
+				43EE31651DC9BBCF003C6DFF /* CroAddressTests */,
+				43EE31701DC9BBCF003C6DFF /* CroAddressUITests */,
+				43EE314A1DC9BBCF003C6DFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43EE314A1DC9BBCF003C6DFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43EE31491DC9BBCF003C6DFF /* CroAddress.app */,
+				43EE31621DC9BBCF003C6DFF /* CroAddressTests.xctest */,
+				43EE316D1DC9BBCF003C6DFF /* CroAddressUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43EE314B1DC9BBCF003C6DFF /* CroAddress */ = {
+			isa = PBXGroup;
+			children = (
+				43EE314F1DC9BBCF003C6DFF /* AppDelegate.h */,
+				43EE31501DC9BBCF003C6DFF /* AppDelegate.m */,
+				43EE31521DC9BBCF003C6DFF /* ViewController.h */,
+				43EE31531DC9BBCF003C6DFF /* ViewController.m */,
+				43EE31551DC9BBCF003C6DFF /* Main.storyboard */,
+				43EE31581DC9BBCF003C6DFF /* Assets.xcassets */,
+				43EE315A1DC9BBCF003C6DFF /* LaunchScreen.storyboard */,
+				43EE315D1DC9BBCF003C6DFF /* Info.plist */,
+				43EE314C1DC9BBCF003C6DFF /* Supporting Files */,
+			);
+			path = CroAddress;
+			sourceTree = "<group>";
+		};
+		43EE314C1DC9BBCF003C6DFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43EE314D1DC9BBCF003C6DFF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43EE31651DC9BBCF003C6DFF /* CroAddressTests */ = {
+			isa = PBXGroup;
+			children = (
+				43EE31661DC9BBCF003C6DFF /* CroAddressTests.m */,
+				43EE31681DC9BBCF003C6DFF /* Info.plist */,
+			);
+			path = CroAddressTests;
+			sourceTree = "<group>";
+		};
+		43EE31701DC9BBCF003C6DFF /* CroAddressUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43EE31711DC9BBCF003C6DFF /* CroAddressUITests.m */,
+				43EE31731DC9BBCF003C6DFF /* Info.plist */,
+			);
+			path = CroAddressUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43EE31481DC9BBCE003C6DFF /* CroAddress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EE31761DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddress" */;
+			buildPhases = (
+				43EE31451DC9BBCE003C6DFF /* Sources */,
+				43EE31461DC9BBCE003C6DFF /* Frameworks */,
+				43EE31471DC9BBCE003C6DFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CroAddress;
+			productName = CroAddress;
+			productReference = 43EE31491DC9BBCF003C6DFF /* CroAddress.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43EE31611DC9BBCF003C6DFF /* CroAddressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EE31791DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddressTests" */;
+			buildPhases = (
+				43EE315E1DC9BBCF003C6DFF /* Sources */,
+				43EE315F1DC9BBCF003C6DFF /* Frameworks */,
+				43EE31601DC9BBCF003C6DFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43EE31641DC9BBCF003C6DFF /* PBXTargetDependency */,
+			);
+			name = CroAddressTests;
+			productName = CroAddressTests;
+			productReference = 43EE31621DC9BBCF003C6DFF /* CroAddressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43EE316C1DC9BBCF003C6DFF /* CroAddressUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EE317C1DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddressUITests" */;
+			buildPhases = (
+				43EE31691DC9BBCF003C6DFF /* Sources */,
+				43EE316A1DC9BBCF003C6DFF /* Frameworks */,
+				43EE316B1DC9BBCF003C6DFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43EE316F1DC9BBCF003C6DFF /* PBXTargetDependency */,
+			);
+			name = CroAddressUITests;
+			productName = CroAddressUITests;
+			productReference = 43EE316D1DC9BBCF003C6DFF /* CroAddressUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43EE31411DC9BBCE003C6DFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Crownor.com;
+				TargetAttributes = {
+					43EE31481DC9BBCE003C6DFF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 76UCH3GW85;
+						ProvisioningStyle = Automatic;
+					};
+					43EE31611DC9BBCF003C6DFF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 76UCH3GW85;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43EE31481DC9BBCE003C6DFF;
+					};
+					43EE316C1DC9BBCF003C6DFF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 76UCH3GW85;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43EE31481DC9BBCE003C6DFF;
+					};
+				};
+			};
+			buildConfigurationList = 43EE31441DC9BBCE003C6DFF /* Build configuration list for PBXProject "CroAddress" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43EE31401DC9BBCE003C6DFF;
+			productRefGroup = 43EE314A1DC9BBCF003C6DFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43EE31481DC9BBCE003C6DFF /* CroAddress */,
+				43EE31611DC9BBCF003C6DFF /* CroAddressTests */,
+				43EE316C1DC9BBCF003C6DFF /* CroAddressUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43EE31471DC9BBCE003C6DFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EE315C1DC9BBCF003C6DFF /* LaunchScreen.storyboard in Resources */,
+				43EE31591DC9BBCF003C6DFF /* Assets.xcassets in Resources */,
+				43EE31571DC9BBCF003C6DFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE31601DC9BBCF003C6DFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE316B1DC9BBCF003C6DFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43EE31451DC9BBCE003C6DFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EE31541DC9BBCF003C6DFF /* ViewController.m in Sources */,
+				43EE31511DC9BBCF003C6DFF /* AppDelegate.m in Sources */,
+				43EE314E1DC9BBCF003C6DFF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE315E1DC9BBCF003C6DFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EE31671DC9BBCF003C6DFF /* CroAddressTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EE31691DC9BBCF003C6DFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EE31721DC9BBCF003C6DFF /* CroAddressUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43EE31641DC9BBCF003C6DFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43EE31481DC9BBCE003C6DFF /* CroAddress */;
+			targetProxy = 43EE31631DC9BBCF003C6DFF /* PBXContainerItemProxy */;
+		};
+		43EE316F1DC9BBCF003C6DFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43EE31481DC9BBCE003C6DFF /* CroAddress */;
+			targetProxy = 43EE316E1DC9BBCF003C6DFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43EE31551DC9BBCF003C6DFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EE31561DC9BBCF003C6DFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43EE315A1DC9BBCF003C6DFF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EE315B1DC9BBCF003C6DFF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43EE31741DC9BBCF003C6DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		43EE31751DC9BBCF003C6DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43EE31771DC9BBCF003C6DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43EE31781DC9BBCF003C6DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		43EE317A1DC9BBCF003C6DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroAddress.app/CroAddress";
+			};
+			name = Debug;
+		};
+		43EE317B1DC9BBCF003C6DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroAddress.app/CroAddress";
+			};
+			name = Release;
+		};
+		43EE317D1DC9BBCF003C6DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CroAddress;
+			};
+			name = Debug;
+		};
+		43EE317E1DC9BBCF003C6DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 76UCH3GW85;
+				INFOPLIST_FILE = CroAddressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CroAddress;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43EE31441DC9BBCE003C6DFF /* Build configuration list for PBXProject "CroAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EE31741DC9BBCF003C6DFF /* Debug */,
+				43EE31751DC9BBCF003C6DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43EE31761DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EE31771DC9BBCF003C6DFF /* Debug */,
+				43EE31781DC9BBCF003C6DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43EE31791DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EE317A1DC9BBCF003C6DFF /* Debug */,
+				43EE317B1DC9BBCF003C6DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43EE317C1DC9BBCF003C6DFF /* Build configuration list for PBXNativeTarget "CroAddressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EE317D1DC9BBCF003C6DFF /* Debug */,
+				43EE317E1DC9BBCF003C6DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43EE31411DC9BBCE003C6DFF /* Project object */;
+}
