@@ -12,6 +12,7 @@
 		4351FE791DCC1DAB009F3A9A /* CRUnderLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4351FE781DCC1DAB009F3A9A /* CRUnderLineTextField.m */; };
 		4351FE7C1DCC221F009F3A9A /* newContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4351FE7B1DCC221F009F3A9A /* newContactViewController.m */; };
 		435F29A31DC9CBD0002F4F5E /* VMButtonCircleFun.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F29A21DC9CBD0002F4F5E /* VMButtonCircleFun.m */; };
+		43799DE81DD93072005084F0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43799DE71DD93072005084F0 /* DetailViewController.m */; };
 		439634781DCC650B0017DB19 /* ContactFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 439634771DCC650B0017DB19 /* ContactFrameModel.m */; };
 		4396347B1DCC65700017DB19 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396347A1DCC65700017DB19 /* ContactModel.m */; };
 		4396347E1DCC6C220017DB19 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396347D1DCC6C220017DB19 /* ContactCell.m */; };
@@ -54,6 +55,8 @@
 		4351FE7B1DCC221F009F3A9A /* newContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newContactViewController.m; sourceTree = "<group>"; };
 		435F29A11DC9CBD0002F4F5E /* VMButtonCircleFun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMButtonCircleFun.h; sourceTree = "<group>"; };
 		435F29A21DC9CBD0002F4F5E /* VMButtonCircleFun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMButtonCircleFun.m; sourceTree = "<group>"; };
+		43799DE61DD93072005084F0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		43799DE71DD93072005084F0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		439634761DCC650B0017DB19 /* ContactFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFrameModel.h; sourceTree = "<group>"; };
 		439634771DCC650B0017DB19 /* ContactFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactFrameModel.m; sourceTree = "<group>"; };
 		439634791DCC65700017DB19 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				4351FE7B1DCC221F009F3A9A /* newContactViewController.m */,
 				43F693271DCAE2CC00C16F33 /* KeyPadViewController.m */,
 				43F693261DCAE2CC00C16F33 /* KeyPadViewController.h */,
+				43799DE61DD93072005084F0 /* DetailViewController.h */,
+				43799DE71DD93072005084F0 /* DetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				4351FE791DCC1DAB009F3A9A /* CRUnderLineTextField.m in Sources */,
 				439634781DCC650B0017DB19 /* ContactFrameModel.m in Sources */,
 				4396347E1DCC6C220017DB19 /* ContactCell.m in Sources */,
+				43799DE81DD93072005084F0 /* DetailViewController.m in Sources */,
 				43EE314E1DC9BBCF003C6DFF /* main.m in Sources */,
 				43F6931F1DCADE0A00C16F33 /* MainViewController.m in Sources */,
 				4306F6141DCCAADE00E21629 /* ResultViewController.m in Sources */,
@@ -525,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76UCH3GW85;
 				INFOPLIST_FILE = CroAddress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,6 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76UCH3GW85;
 				INFOPLIST_FILE = CroAddress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crownor.CroAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,13 +9,14 @@
 #import "ResultViewController.h"
 
 @interface ResultViewController ()
-
+@property int countNum;
 @end
 
 @implementation ResultViewController
-
+@synthesize resultMutableArray;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -63,40 +64,66 @@
 
 
 - (IBAction)searchByNameButtonDidPress:(id)sender {
+    resultMutableArray = [NSMutableArray array];
+    [resultMutableArray removeAllObjects];
     NSMutableDictionary *resultDict =  [self getNameFile];
     NSMutableString *targetString = [[NSMutableString alloc]initWithString:[NSString stringWithFormat:@"%lu",[self.targetTextField.text hash]]];
     
     
     while ([[resultDict allKeys]containsObject:targetString]) {
+        _countNum = 0;
         if ([[[resultDict objectForKey:targetString]objectForKey:@"nameString"] isEqualToString:self.targetTextField.text]) {
-            [self setBackgroundImageBlur];
-            self.nameTextField.text = self.targetTextField.text;
-            self.telTextField.text = [[resultDict objectForKey:targetString]objectForKey:@"telString"];
-            NSLog(@"%@", self.nameTextField.text);
-            NSLog(@"%@", self.telTextField.text);
+            NSDictionary *resultDic = [NSDictionary dictionaryWithObjectsAndKeys:self.targetTextField.text,@"name",[[resultDict objectForKey:targetString]objectForKey:@"telString"],@"tel", nil];
+            [resultMutableArray addObject:resultDic];
         }
        double targetNum = [targetString doubleValue];
 
         [targetString setString:[NSString stringWithFormat:@"%lu",(unsigned long)(targetNum+1)]];
     }
+    if (!([resultMutableArray count] ==0)) {
+        [self setBackgroundImageBlur];
+        self.nameTextField.text = self.targetTextField.text;
+        self.telTextField.text = [[resultMutableArray objectAtIndex:0]objectForKey:@"tel"];
+        self.beforeName = self.nameTextField.text;
+        self.beforeTel = self.telTextField.text;
+        if ([self.resultMutableArray count] > 0) {
+            [self.nextButton setHidden:FALSE];
+        }else{
+            [self.nextButton setHidden:YES];
+        }
+    }
     
 }
+
+
 - (IBAction)searchByTelButtonDidPress:(id)sender {
+    resultMutableArray = [NSMutableArray array];
+    [resultMutableArray removeAllObjects];
     NSMutableDictionary *resultDict =  [self getTelFile];
     NSMutableString *targetString = [[NSMutableString alloc]initWithString:[NSString stringWithFormat:@"%lu",[self.targetTextField.text hash]]];
     
     
     while ([[resultDict allKeys]containsObject:targetString]) {
+        _countNum = 0;
         if ([[[resultDict objectForKey:targetString]objectForKey:@"telString"] isEqualToString:self.targetTextField.text]) {
-            [self setBackgroundImageBlur];
-            self.telTextField.text = self.targetTextField.text;
-            self.nameTextField.text = [[resultDict objectForKey:targetString]objectForKey:@"nameString"];
-            NSLog(@"%@", self.nameTextField.text);
-            NSLog(@"%@", self.telTextField.text);
+            NSDictionary *resultDic = [NSDictionary dictionaryWithObjectsAndKeys:self.targetTextField.text,@"tel",[[resultDict objectForKey:targetString]objectForKey:@"nameString"],@"name", nil];
+            [resultMutableArray addObject:resultDic];
         }
         double targetNum = [targetString doubleValue];
         
         [targetString setString:[NSString stringWithFormat:@"%lu",(unsigned long)(targetNum+1)]];
+    }
+    if (!([resultMutableArray count] ==0)) {
+        [self setBackgroundImageBlur];
+        self.telTextField.text = self.targetTextField.text;
+        self.nameTextField.text = [[resultMutableArray objectAtIndex:0]objectForKey:@"name"];
+        self.beforeName = self.nameTextField.text;
+        self.beforeTel = self.telTextField.text;
+        if ([self.resultMutableArray count] > 0) {
+            [self.nextButton setHidden:FALSE];
+        }else{
+            [self.nextButton setHidden:YES];
+        }
     }
 }
 
@@ -119,36 +146,95 @@
     [self performSegueWithIdentifier:@"searchToMain" sender:self];
 }
 
+-(NSUInteger)hashWithInput:(NSString *)inputString{
+    NSUInteger result = [inputString hash];
+    NSLog(@"hash之后的结果是%lu ", (unsigned long)result);
+    return result;
+}
+
+
 - (IBAction)alterButtonDidPress:(id)sender {
-    NSString *filepathName = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"contactsByName.plist"];
-    NSString *filepathTel = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"contactsByTel.plist"];
-    //所有的数据列表
-    NSMutableDictionary *datalistName= [[[NSMutableDictionary alloc]initWithContentsOfFile:filepathName]mutableCopy];
-    NSMutableDictionary *datalistTel= [[[NSMutableDictionary alloc]initWithContentsOfFile:filepathName]mutableCopy];
+    
+    
+    //获取沙盒路径
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    // plist 路径
+    NSString *plistPathForName = [documentsDirectory stringByAppendingPathComponent:@"contactsByName.plist"];
+    NSString *plistPathForTel = [documentsDirectory stringByAppendingPathComponent:@"contactsByTel.plist"];
+    
+    NSFileManager *fileManager = [[NSFileManager  alloc]init];
+    
+    NSDictionary *contentDict = [NSDictionary dictionaryWithObjectsAndKeys:self.nameTextField.text ,@"nameString",self.telTextField.text,@"telString", nil];
+    
+    //hash姓名
+    NSUInteger keyIntByName = [self hashWithInput:self.nameTextField.text];
+    NSString *keyByName = [NSString stringWithFormat:@"%lu",keyIntByName];
+    //hash电话号码
+    NSUInteger keyIntByTel = [self hashWithInput:self.telTextField.text];
+    NSString *keyByTel = [NSString stringWithFormat:@"%lu",keyIntByTel];
     
     
     
+    //写入Name文件，同时注意碰撞
+    NSMutableDictionary *contactsDictByName = [[NSMutableDictionary alloc]initWithContentsOfFile:plistPathForName];
     
-    NSMutableDictionary *rootDicName = [[NSMutableDictionary alloc ] init];
-    NSMutableDictionary *rootDicTel = [[NSMutableDictionary alloc ] init];
+    NSMutableString *targetString = [[NSMutableString alloc]initWithString:[NSString stringWithFormat:@"%lu",[self.beforeName hash]]];
+    
+    
+    while ([[contactsDictByName allKeys]containsObject:targetString]) {
+        _countNum = 0;
+        if ([[[contactsDictByName objectForKey:targetString]objectForKey:@"nameString"] isEqualToString:self.beforeName] &&[[[contactsDictByName objectForKey:targetString]objectForKey:@"telString"] isEqualToString:self.beforeTel]) {
+            [contactsDictByName removeObjectForKey:targetString];
 
-    //字典中的详细数据
-    NSMutableDictionary *userDataDic = [[NSMutableDictionary alloc]init];
-    [userDataDic setObject:self.nameTextField.text forKey:@"nameString"];
-    [userDataDic setObject:self.telTextField.text forKey:@"telString"];
-    //两种方式，只需要更改一下key就可以了
-    [rootDicName setObject:userDataDic forKey:self.nameTextField.text];
-    [rootDicTel setObject:userDataDic forKey:self.telTextField.text];
-    
-    [rootDicName writeToFile:filepathName atomically:YES];
-    [rootDicTel writeToFile:filepathTel atomically:YES];
-
-   
+        }
+        double targetNum = [targetString doubleValue];
+        
+        [targetString setString:[NSString stringWithFormat:@"%lu",(unsigned long)(targetNum+1)]];
     }
+    [contactsDictByName setObject:contentDict forKey:keyByName];
+    [contactsDictByName writeToFile:plistPathForName atomically:YES];
+        
+    //写入Tel文件，同时注意碰撞
+    NSMutableDictionary *contactsDictByTel = [[NSMutableDictionary alloc]initWithContentsOfFile:plistPathForTel];
+    
+    NSMutableString *targetStringByTel = [[NSMutableString alloc]initWithString:[NSString stringWithFormat:@"%lu",[self.beforeTel hash]]];
+    
+    
+    while ([[contactsDictByTel allKeys]containsObject:targetStringByTel]) {
+        _countNum = 0;
+        if ([[[contactsDictByTel objectForKey:targetStringByTel]objectForKey:@"nameString"] isEqualToString:self.beforeName] &&[[[contactsDictByTel objectForKey:targetStringByTel]objectForKey:@"telString"] isEqualToString:self.beforeTel]) {
+            [contactsDictByTel removeObjectForKey:targetStringByTel];
+            
+        }
+        double targetNum = [targetStringByTel doubleValue];
+        
+        [targetStringByTel setString:[NSString stringWithFormat:@"%lu",(unsigned long)(targetNum+1)]];
+    }
+    [contactsDictByTel setObject:contentDict forKey:keyByTel];
+    [contactsDictByTel writeToFile:plistPathForTel atomically:YES];
+    
+}
 
 - (IBAction)backButtonDidpress:(id)sender {
     [self removeBackgroundImageBlur];
     [self performSegueWithIdentifier:@"searchToMain" sender:self];
 
+}
+- (IBAction)nextButtonDidPress:(id)sender {
+    
+
+    if ((([self.resultMutableArray count]-self.countNum)>1)) {
+        self.nameTextField.text = [[self.resultMutableArray objectAtIndex:(_countNum+1)] objectForKey:@"name"];
+        self.telTextField.text = [[self.resultMutableArray objectAtIndex:(_countNum+1)] objectForKey:@"tel"];
+        self.beforeName = self.nameTextField.text;
+        self.beforeTel = self.telTextField.text;
+            [self.nextButton setHidden:FALSE];
+    }else{
+        
+        [self.nextButton setHidden:YES];
+    }
+
+    self.countNum++;
 }
 @end

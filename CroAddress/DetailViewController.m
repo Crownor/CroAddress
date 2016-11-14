@@ -1,21 +1,22 @@
 //
-//  ContactsViewController.m
+//  DetailViewController.m
 //  CroAddress
 //
-//  Created by Departures on 03/11/2016.
+//  Created by Departures on 14/11/2016.
 //  Copyright © 2016 Crownor.com. All rights reserved.
 //
 
-#import "ContactsViewController.h"
+#import "DetailViewController.h"
+
 #import "ContactFrameModel.h"
 #import "ContactModel.h"
 #import "ContactCell.h"
-@interface ContactsViewController ()
+@interface DetailViewController ()
 
 @property (nonatomic,strong) NSMutableArray *contactsMutableArray;
 @end
 
-@implementation ContactsViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +27,7 @@
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     //移除下划线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    
     //设置TableView
     
     // Do any additional setup after loading the view.
@@ -68,22 +69,22 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 -(NSMutableArray *)contactsMutableArray{
     if (_contactsMutableArray == nil) {
-//        NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"contacts.plist" ofType:nil]];
+        //        NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"contacts.plist" ofType:nil]];
         
         NSArray *sandboxpath= NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *filePath = [[sandboxpath objectAtIndex:0] stringByAppendingPathComponent:@"contactsByTel.plist"];
+        NSString *filePath = [[sandboxpath objectAtIndex:0] stringByAppendingPathComponent:@"result.plist"];
         NSLog(@"%@",NSHomeDirectory());
         //获取数据
         NSMutableDictionary *array = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
@@ -97,7 +98,7 @@
             NSLog(@"testHead");
             NSLog(@"%@", dict);
             NSLog(@"test");
-
+            
             ContactFrameModel *cf = [[ContactFrameModel alloc]init];
             cf.contact = conta;
             [contactsArray addObject:cf];
@@ -127,6 +128,4 @@
     cell.frameModel = model;
     return cell;
 }
-
-
 @end

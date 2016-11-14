@@ -19,6 +19,11 @@
 @property (weak, nonatomic) IBOutlet CRUnderLineTextField *targetTextField;
 @property (weak, nonatomic) IBOutlet CRUnderLineTextField *telTextField;
 @property (weak, nonatomic) IBOutlet UIView *resultView;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+- (IBAction)nextButtonDidPress:(id)sender;
 @property  UIVisualEffectView *blurView;
+@property NSMutableArray *resultMutableArray;
 @property BOOL isName;
+@property NSString *beforeName;
+@property NSString *beforeTel;
 @end
